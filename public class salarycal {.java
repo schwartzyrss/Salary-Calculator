@@ -1,0 +1,33 @@
+public class salarycal {
+
+    public static void main(String[] args) {
+    
+        String employeeName = "Princess Zyra Joyce U. Lagmay";
+        double monthlySalary = 35000;
+        int workingDaysPerMonth = 21;
+        int leaveCredits = 3; 
+
+        double sssContributionRate = 0.045;
+        double pagibigContribution = 200;
+        double withHoldingTaxRate = 0.10;
+
+        int lateMinute = 30; 
+        int vacationDays = 5;
+
+        double dailyRate = monthlySalary/workingDaysPerMonth;
+        
+        double grossPay= workingDaysPerMonth -leaveCredits- vacationDays* dailyRate;
+
+        double sssContribution = grossPay * sssContributionRate;
+        double withholdingTax = grossPay * withHoldingTaxRate;
+
+        System.out.println ("employeeName"+employeeName);
+        System.out.println ("Payslip for" + grossPay);
+        System.out.println ("Deduction:");
+        System.out.println (" SSS Contribution:" + sssContributionRate);
+        System.out.println ("Pag-IBIG Contribution:" + pagibigContribution);
+        System.out.println ("Withholding Tax:" + withholdingTax);
+
+        System.out.println ("--------------------------------------");
+    }        
+}
